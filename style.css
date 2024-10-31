@@ -1,0 +1,552 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Load Lato from fonts folder */
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/lato/Lato-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/lato/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/lato/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Load Roboto Slab from fonts folder for emphasis elements */
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('fonts/roboto-slab/RobotoSlab-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+em, blockquote, .emphasis, strong {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+
+
+/* Headings (h1, h2, h3, .arima-h1) will use Playfair Display */
+h1, h2, h3, .arima-h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Body text will use Lato, with different weights where needed */
+body, p, li, a, footer {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Default normal weight */
+}
+
+/* Light-weight Lato for special emphasis in body text */
+.light-text {
+    font-weight: 300;
+}
+
+/* Bold-weight Lato for headings in body text or emphasis */
+.bold-text {
+    font-weight: 700;
+}
+
+/* Emphasis elements like blockquote, em tags, and certain sections use Roboto Slab */
+em, blockquote, .emphasis, strong {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400; /* Use Roboto Slab with regular weight for emphasis */
+}
+
+/* General styling for headings */
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Applying fonts to navigation links */
+header .navbar a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700; /* Make navigation links bold */
+}
+
+/* Applying fonts to footer */
+.footer p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Keep footer text normal weight */
+}
+
+.footer-links a {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400; /* Use Roboto Slab for footer links for emphasis */
+}
+
+
+/* Ensure the main content takes up full height */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* This allows the main content to grow and push the footer down */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #28a745; /* Bootstrap success color */
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.arima-h1  {
+    font-family: "Arima", system-ui !important;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+a {
+    text-decoration: none;
+}
+
+
+.container {
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.main-container {
+    height: 3rem;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.center {
+    justify-content: center;
+    margin-top: -1rem;
+}
+
+.img-brand {
+    width: 60%; 
+}
+
+
+.flex_secondary {
+    display: flex;
+    flex-direction: column; /* Stacks the text above the image */
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    height: 100vh; /* Optional: Makes the div take the full height of the viewport */
+}
+
+
+img {
+    background-color: transparent;
+    mix-blend-mode: multiply;
+    width: 150px; /* Sets all images to the same width */
+    height: auto; /* Keeps the image's aspect ratio intact */
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Adds space between the boxes */
+    margin: 2.5rem;
+}
+
+.box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid black;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    mix-blend-mode: multiply; /* Ensure blend mode applies to the boxes */
+    background-color: transparent; /* Prevent background color changes */
+}
+
+.box:hover {
+    transform: scale(1.05); /* Scale the box by 10% on hover */
+    background-color: transparent; /* Ensure the background remains transparent */
+}
+
+img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+.lv-logo {
+    height: 150px; /* Adjusted height for the Louis Vuitton logo */
+}
+
+.footer {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: invert(1); /* Makes the icons white on a dark background */
+}
+
+.social-media a:hover img {
+    filter: invert(0.5); /* Hover effect on the social icons */
+}
+
+.lv-pattern {
+    width: 500px;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 2px 3px 2px black;
+}
+
+.active:visited {
+    color: #ffc107;
+}
+
+/* Form Styling */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centers the form vertically in the viewport */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    background-color: #fff; /* White background for the form */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #007bff; /* Blue outline */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 450px; /* Limits form size */
+    width: 100%;
+}
+
+/* Input fields styling */
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Hover and focus effect */
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+    border-color: #007bff; /* Changes border color on focus */
+}
+
+/* Radio button alignment */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+label {
+    margin-left: 5px;
+}
+
+/* Form link */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Button Styling */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+#thank-you-message {
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease; /* Transition for fading effect */
+    display: none; /* Initially hidden */
+}
+
+/* Header and Navbar Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #004225; /* Green navbar color */
+    padding: 0 20px; /* Horizontal padding to control spacing */
+    height: 45px; /* Compact height for the navbar */
+    width: 100vw; /* Full viewport width */
+    box-sizing: border-box;
+    position: fixed; /* Stick to the top of the viewport */
+    top: 0;
+    left: 0; /* Align to the left edge of the viewport */
+    z-index: 1000;
+}
+
+/* Logo Styling (Left-Aligned, Smaller Size) */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Spacing between logo icon and text */
+}
+.logo a {
+    font-size: 14px; /* Smaller size for the logo to match the link size */
+    font-weight: bold;
+    color: #ffc107; /* Gold color for the logo */
+    text-decoration: none;
+}
+
+/* Desktop Navigation (Right-Aligned, Smaller Size) */
+.navbar {
+    display: flex; 
+    gap: 15px; /* Adjust spacing between links */
+    align-items: center;
+    margin-left: auto; /* Align the navigation links to the right */
+}
+.navbar a {
+    color: #ffc107; /* Gold color for links */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px; /* Match the smaller size of the logo */
+}
+
+/* Burger Menu Icon for Mobile Only (Hidden on Desktop) */
+.burger-menu {
+    display: none; /* Hidden on desktop view */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* White color for burger lines */
+}
+
+/* Mobile Dropdown Navigation Menu (Hidden by Default) */
+header nav ul {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    background-color: #004225; /* Match green navbar */
+    padding: 10px;
+    position: fixed; /* Use fixed positioning for exact placement */
+    right: 20px; /* Align it with the burger icon */
+    top: 50px; /* Positioned directly below the header */
+    width: max-content; /* Set width to fit the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1001; /* Make sure it stays above other content */
+}
+
+/* Show Dropdown Menu when Burger is Clicked */
+header nav ul.show-menu {
+    display: flex;
+}
+
+/* Style Mobile Dropdown Links */
+header nav ul li {
+    margin: 10px 0;
+    text-align: left; /* Align links to the left */
+}
+
+header nav ul li a {
+    color: #fff; /* White text for better readability */
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 0; /* Set padding to 0 to align to the left edge */
+}
+
+/* Mobile Styles for Burger and Navbar */
+@media (max-width: 768px) {
+    /* Hide the desktop navbar on mobile view */
+    .navbar {
+        display: none;
+    }
+
+    /* Show the burger menu on mobile view */
+    .burger-menu {
+        display: flex;
+        position: fixed; /* Ensure burger stays fixed while scrolling */
+        right: 20px; /* Align burger to the right */
+        top: 10px; /* Align to top of viewport with some spacing */
+        z-index: 1002; /* Ensure burger icon is above other content */
+    }
+
+    /* Mobile Logo Alignment */
+    .logo {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
+ /* General Mobile Styles for All Pages */
+@media (max-width: 768px) {
+    /* Ensure there's sufficient padding on all pages */
+    body {
+        padding: 15px !important; /* Add padding to avoid content hitting screen edges */
+    }
+
+    /* Universal Header and General Text Adjustments */
+    header {
+        padding: 15px !important; /* More padding around header content for better mobile appearance */
+    }
+
+    h1,
+    h2,
+    h3,
+    .arima-h1 {
+        font-size: 1.5rem !important; /* Smaller font size for headings on mobile */
+        text-align: center !important; /* Center-align headings for a balanced look */
+        margin-top: 3rem;
+    }
+}
+
+
+/* Mobile Styles for the Sortiment Page (Duck Image) */
+@media (max-width: 768px) {
+    .flex_secondary {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto; /* Adjust height to prevent overflow */
+        padding: 15px; /* Add some spacing to keep the image centered */
+    }
+
+    /* Image adjustments for better fit */
+    .flex_secondary img {
+        max-width: 90%; /* Limit the width to 90% of the viewport width */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+
+    /* Center and adjust the title above the duck image */
+    .arima-h1 {
+        font-size: 1.3rem; /* Smaller font size on mobile */
+        text-align: center;
+        margin-bottom: 10px; /* Reduce margin to save space */
+    }
+}
+
+/* Mobile Styles for the Kontakt Page (Contact Form) */
+@media (max-width: 768px) {
+    /* Contact Form Container */
+    .form-container {
+        padding: 10px;
+    }
+
+    form {
+        width: 85%; /* Make the form narrower */
+        padding: 1rem; /* Reduce padding for better mobile fit */
+        width: 50%;
+        height: 36rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"] {
+        padding: 8px; /* Smaller padding for input fields */
+        font-size: 0.9rem; /* Smaller font size for readability on mobile */
+    }
+
+    /* Reduce padding for buttons on mobile */
+    button {
+        padding: 8px 10px;
+        font-size: 0.9rem; /* Smaller button font size */
+    }
+}
+
+/* General Enhancements for Both Pages */
+@media (max-width: 768px) {
+    /* Improve dropdown menu layout */
+    header nav ul {
+        right: 10px; /* Ensure dropdown starts closer to the right edge */
+        padding: 15px 10px; /* Better padding for mobile */
+        width: max-content; /* Ensure dropdown width fits content */
+    }
+
+    header nav ul li a {
+        text-align: left; /* Ensure dropdown links start from left */
+        padding-left: 10px; /* Spacing to prevent text from touching screen edges */
+    }
+}
